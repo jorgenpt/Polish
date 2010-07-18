@@ -1,10 +1,17 @@
 Polish, Sparkle utilities
 =========================
 
+'Polish your software so it will [Sparkle][0] even brighter!'
+
 About
 -----
-Polish is a set of tools I personally find useful to use with Sparkle, to make
-appcasts and release notes simpler to update and maintain.
+Polish is a set of tools meant to complement [Sparkle][0], by making appcasts
+and release notes simpler to create and maintain.
+
+It also adds support for something I call 'cumulative release notes', which
+basically means that a user upgrading from 0.1 to 0.4 will not just see the
+changes in 0.4 (current Sparkle behavior), but also changes in any intermediate
+updates, like 0.2 and 0.3.
 
 Eventually I intend to add support for capturing system profile information (or
 extract it from web server logs) and slightly unrelated - tools to create and
@@ -27,5 +34,6 @@ Quickstart
   your webserver. Put the zip of your app into a subdir called 'updates' unless
   you changed 'release\_dir' and 'release\_url'.
 
+[0]: http://sparkle.andymatuschak.org/
 [1]: http://wiki.github.com/jorgenpt/Polish/configuration-options
 [2]: http://wiki.github.com/andymatuschak/Sparkle/publishing-an-update
