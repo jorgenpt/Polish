@@ -43,7 +43,7 @@ action required.
    your webserver. Put the zip of your app into a subdir called 'updates' unless
    you changed 'release\_dir' and 'release\_url', and name it *MyExampleApp
    0.1.zip* - the filename must be in this format, where *MyExampleApp* is
-   whatever you set `app\_name` to in config.py, and 0.1 is the name of the
+   whatever you set `app_name` to in config.py, and 0.1 is the name of the
    release description file minus the extension.
 
 That's it! Point your Sparkle setup to this new appcast, and you should be good
