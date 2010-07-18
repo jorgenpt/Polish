@@ -3,7 +3,7 @@ import re
 from operator import attrgetter
 import os
 import yaml
-import polish_config
+import config
 
 class Version(object):
     def __init__(self, version):
@@ -65,14 +65,14 @@ class Release(object):
     def filename(self):
         if 'filename' in self._info:
             return self._info['filename']
-        return polish_config.release_name % self._version
+        return config.release_name % self._version
 
     @property
     def path(self):
         if 'directory' in self._info:
             directory = self._info.get('directory', '')
         else:
-            directory = polish_config.release_dir
+            directory = config.release_dir
 
         return os.path.join(directory, self.filename)
 

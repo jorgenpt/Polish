@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
-import polish_config as config
+import os
+import config
 
 def template(file, *args, **kwargs):
     if len(args) == 1:
