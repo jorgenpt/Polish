@@ -19,6 +19,13 @@ submit usage statistics from your Cocoa app.
 
 Quickstart
 ----------
+There are a few simple steps needed to get started with Polish. I've tried
+designing Polish to be as close to zero-setup as possible, but there is some
+action required.
+
+(If you have thoughts on how to make this easier for first-time users, 
+[contact me][3]!)
+
 * Copy config.dist.py to config.py, and edit it. Read [Configuration Options][1]
   for a more in-depth description of these options.
 * Create release information for your tool in releases/. Copy example.yaml to
@@ -34,6 +41,28 @@ Quickstart
   your webserver. Put the zip of your app into a subdir called 'updates' unless
   you changed 'release\_dir' and 'release\_url'.
 
+That's it! Point your Sparkle setup to this new appcast, and you should be good
+to go. See [Sparkle Setup][4] for more information on how to set your app up
+with Sparkle and set the appcast URL.
+
+Further customization
+---------------------
+If you want to customize it more, you can change the files in template/ for
+the HTML and XML layout of the release notes and the appcast, respectively. See
+[Templates][5] for more information about these.
+
+For setups that aren't compatible with the default config, see 
+[Configuration Options][1] for a complete documentation of the available
+configuration options and their values.
+
+When a release for some reason doesn't fit the standard bill in some way, there
+are some overrides you can put in a release info file to customize it farther.
+You can see [Release Description][6] for an overview of these.
+
 [0]: http://sparkle.andymatuschak.org/
 [1]: http://wiki.github.com/jorgenpt/Polish/configuration-options
 [2]: http://wiki.github.com/andymatuschak/Sparkle/publishing-an-update
+[3]: http://github.com/jorgenpt
+[4]: http://wiki.github.com/andymatuschak/Sparkle/
+[5]: http://wiki.github.com/jorgenpt/Polish/templates
+[6]: http://wiki.github.com/jorgenpt/Polish/release-description

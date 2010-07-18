@@ -1,5 +1,8 @@
+# This is the date we put in the appcast.
 date:       Fri, 16 Jul 2010 11:25:27 -0700
+# This is the signature of your zip bundle.
 signature:  DSA SIGNATURE GOES HERE
+# This is what we show in the release notes.
 changelog:
     # These names are up to you. They will be capitalized in the HTML.
     # (changes -> a section called Changes)
