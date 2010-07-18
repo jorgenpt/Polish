@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 
 import polish
-from releases import get_releases
-
 
 def main():
     configdict = {}
@@ -10,7 +8,7 @@ def main():
         configdict[attr] = getattr(polish.config, attr)
 
     items = ''
-    releases = get_releases(polish.config.release_info_dir)
+    releases = polish.get_releases(polish.config.release_info_dir)
     for release in releases:
         infodict = {}
         for attr in ('version', 'date', 'size', 'signature', 'filename'):
