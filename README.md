@@ -29,17 +29,22 @@ action required.
 1. Copy config.dist.py to config.py, and edit it. Read 
    [Configuration Options][1] for a more in-depth description of these options.
 2. Create release information for your tool in releases/. Copy example.yaml to
-   <version number>.yaml, e.g. 0.1.yaml, edit and save. Filename is important!
+   $VersionNumber.yaml, e.g. 0.1.yaml, edit and save. Filename is important!
     * You will probably want to read Sparkle's page about [publishing
       updates][2] on instructions on how to sign your release and get the
       signature, which you need for your release YAML.
     * You can use `LC_TIME=en_US date +\"%a, %d %b %G %T %z\"` to generate the
       date for the 'date' field.
+    * Version numbers must be an unbounded number of integers separated by
+      periods. [Apple recommends][7] using at most 3 components (x.y.z).
 3. Generate appcast and release notes, using `./generate appcast > appcast.xml`
    and `./generate releasenotes > releasenotes.html`.
 4. Copy appcast.xml, releasenotes.html, html/polish.js and html/polish.css to
-   your webserver. Put the zip of your app into a subdir called 'updates'
-   unless you changed 'release\_dir' and 'release\_url'.
+   your webserver. Put the zip of your app into a subdir called 'updates' unless
+   you changed 'release\_dir' and 'release\_url', and name it *MyExampleApp
+   0.1.zip* for example - the filename must be in this format, where
+   *MyExampleApp* is whatever you set `app\_name` to in config.py, and 0.1 is
+   the name of the release description file minus the extension.
 
 That's it! Point your Sparkle setup to this new appcast, and you should be good
 to go. See [Sparkle Setup][4] for more information on how to set your app up
@@ -66,3 +71,4 @@ You can see [Release Description][6] for an overview of these.
 [4]: http://wiki.github.com/andymatuschak/Sparkle/
 [5]: http://wiki.github.com/jorgenpt/Polish/templates
 [6]: http://wiki.github.com/jorgenpt/Polish/release-description
+[7]: http://developer.apple.com/mac/library/technotes/tn/tn1132.html
