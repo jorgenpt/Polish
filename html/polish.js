@@ -1,7 +1,7 @@
-function versionGreaterThan(version1, version2)
+function versionGreaterOrEqual(version1, version2)
 {
     var versionLength = Math.min(version1.length, version2.length);
-    for (var i = 0; i < versionLength)
+    for (var i = 0; i < versionLength; ++i)
     {
         var v1 = parseInt(version1[i]);
         var v2 = parseInt(version2[i]);
@@ -12,23 +12,25 @@ function versionGreaterThan(version1, version2)
             return false;
     }
 
-    if (version1.length > version2.length)
-        return true;
-    return false;
-}
-function getQueryVariable(variable) 
+    if (version1.length < version2.length)
+        return false;
 
-    var query = window.location.search.substring(1); 
-    var vars = query.split("&"); 
-    for (var i = 0; i < vars.length; i++) { 
-        var pair = vars[i].split("="); 
+    return true;
+}
+
+function getQueryVariable(variable)
+{
+    var query = window.location.search.substring(1);
+    var vars = query.split("&");
+    for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split("=");
         if (pair[0] == variable)
         {
-            return pair[1]; 
-        } 
-    } 
+            return pair[1];
+        }
+    }
     return null;
-} 
+}
 
 function hideOlder()
 {
@@ -41,14 +43,14 @@ function hideOlder()
     var versions = document.getElementsByClassName('version');
     for (var i = 0; i < versions.length; ++i)
     {
+        var version = versions[i];
         if (hideFollowing)
         {
             version.style.display = 'none';
         }
         else
         {
-            var version = versions[i].split('.');
-            if (versionGreaterThan(version, sourceVersion))
+            if (versionGreaterOrEqual(sourceVersion, version.id.split('.')))
             {
                 version.style.display = 'none';
                 hideFollowing = true;
