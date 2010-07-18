@@ -42,13 +42,17 @@ action required.
 4. Copy appcast.xml, releasenotes.html, html/polish.js and html/polish.css to
    your webserver. Put the zip of your app into a subdir called 'updates' unless
    you changed 'release\_dir' and 'release\_url', and name it *MyExampleApp
-   0.1.zip* for example - the filename must be in this format, where
-   *MyExampleApp* is whatever you set `app\_name` to in config.py, and 0.1 is
-   the name of the release description file minus the extension.
+   0.1.zip* - the filename must be in this format, where *MyExampleApp* is
+   whatever you set `app\_name` to in config.py, and 0.1 is the name of the
+   release description file minus the extension.
 
 That's it! Point your Sparkle setup to this new appcast, and you should be good
 to go. See [Sparkle Setup][4] for more information on how to set your app up
 with Sparkle and set the appcast URL.
+
+For a more complete description of initial setup, see [Initial Setup][8]. For a
+more complete description of the steps to add a new release, see 
+[Publishing An Update][9].
 
 Further customization
 ---------------------
@@ -72,3 +76,5 @@ You can see [Release Description][6] for an overview of these.
 [5]: http://wiki.github.com/jorgenpt/Polish/templates
 [6]: http://wiki.github.com/jorgenpt/Polish/release-description
 [7]: http://developer.apple.com/mac/library/technotes/tn/tn1132.html
+[8]: http://wiki.github.com/jorgenpt/Polish/initial-setup
+[9]: http://wiki.github.com/jorgenpt/Polish/publishing-an-update
