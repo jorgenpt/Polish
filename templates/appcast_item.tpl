@@ -1,6 +1,6 @@
         <item>
             <title>Version %(version)s</title>
-            <sparkle:releaseNotesLink>%(release_notes)s?version=%(version)s</sparkle:releaseNotesLink>
+            <sparkle:releaseNotesLink>%(release_notes)s</sparkle:releaseNotesLink>
             <pubDate>%(date)s</pubDate>
             <enclosure
                 url="%(release_url)s/%(filename)s"
