@@ -1,5 +1,5 @@
-Polish, Sparkle utilities
-=========================
+Polish, utilities for Sparkle
+=============================
 
 'Polish your software so it will [Sparkle][0] even brighter!'
 
