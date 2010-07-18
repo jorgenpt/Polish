@@ -1,0 +1,11 @@
+date:       Fri, 16 Jul 2010 11:25:27 -0700
+signature:  DSA SIGNATURE GOES HERE
+changelog:
+    # These names are up to you. They will be capitalized in the HTML.
+    # (changes -> a section called Changes)
+    changes:
+        - Initial release!
+        - Using the awesome Polish to update appcasts / release notes now.
+    bugfixes:
+        - The world was missing My Example App, it was absolutely
+          required!
