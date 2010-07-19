@@ -34,7 +34,7 @@ function getQueryVariable(variable)
 
 function hideOlder()
 {
-    var sourceVersion = getQueryVariable('version');
+    var sourceVersion = getQueryVariable('currentversion');
     if (!sourceVersion)
         return;
     sourceVersion = sourceVersion.split('.');
